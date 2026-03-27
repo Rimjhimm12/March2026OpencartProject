@@ -5,6 +5,8 @@ test-output/
 build/
 reports/
 logs/
+extent-report/
+
 
 opencart.log
 ##############################
@@ -16,6 +18,7 @@ opencart.log
 *.war
 *.ear
 *.nar
+*.html
 hs_err_pid*
 activityLog.log
 ##############################
