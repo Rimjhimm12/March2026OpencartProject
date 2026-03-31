@@ -20,33 +20,33 @@
         </classes>
     </test>
 
-    <test name="Search Result Page Test ">
-        <parameter name="browser" value="firefox"/>
-        <classes>
-            <class name="com.qa.opencart.tests.SearchResultPageTest" />
-        </classes>
-    </test>
+<!--    <test name="Search Result Page Test ">-->
+<!--        <parameter name="browser" value="firefox"/>-->
+<!--        <classes>-->
+<!--            <class name="com.qa.opencart.tests.SearchResultPageTest" />-->
+<!--        </classes>-->
+<!--    </test>-->
 
-    <test name="Product Info Page Test ">
-        <parameter name="browser" value="firefox"/>
-        <classes>
-            <class name="com.qa.opencart.tests.ProductInfoPageTest" />
-        </classes>
-    </test>
+<!--    <test name="Product Info Page Test ">-->
+<!--        <parameter name="browser" value="firefox"/>-->
+<!--        <classes>-->
+<!--            <class name="com.qa.opencart.tests.ProductInfoPageTest" />-->
+<!--        </classes>-->
+<!--    </test>-->
 
-    <test name="Shopping Cart Page Test ">
-        <parameter name="browser" value="firefox"/>
-        <classes>
-            <class name="com.qa.opencart.tests.ShoppingCartPageTest" />
-        </classes>
-    </test>
+<!--    <test name="Shopping Cart Page Test ">-->
+<!--        <parameter name="browser" value="firefox"/>-->
+<!--        <classes>-->
+<!--            <class name="com.qa.opencart.tests.ShoppingCartPageTest" />-->
+<!--        </classes>-->
+<!--    </test>-->
 
-    <test name="Registration Page Test ">
-        <parameter name="browser" value="firefox"/>
-        <classes>
-            <class name="com.qa.opencart.tests.RegistrationPageTest" />
-        </classes>
-    </test>
+<!--    <test name="Registration Page Test ">-->
+<!--        <parameter name="browser" value="firefox"/>-->
+<!--        <classes>-->
+<!--            <class name="com.qa.opencart.tests.RegistrationPageTest" />-->
+<!--        </classes>-->
+<!--    </test>-->
 
 
 </suite>

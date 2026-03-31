@@ -16,7 +16,7 @@ public class ConstantsUtil {
     public static final String LOGIN_PAGE_URL_FRACTION = "route=account/login";
     public static final String ACCOUNT_PAGE_TITLE = "My Account";
     public static final String ACCOUNT_PAGE_URL = "route=account/account";
-    public static final List<String> ACCOUNT_PAGE_HEADERS_LIST = Arrays.asList("My Account", "My Orders", "My Affiliate Account", "Newsletter");
+    public static final List<String> ACCOUNT_PAGE_HEADERS_LIST = Arrays.asList("My Account11", "My Orders", "My Affiliate Account", "Newsletter");
     public static final String SHOPPING_CART_PAGE_TITLE = "Shopping Cart";
     public static final String REGISTRATION_SUCCESS_MESSAGE = "Your Account Has Been Created!";
 }

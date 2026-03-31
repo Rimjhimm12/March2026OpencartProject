@@ -63,7 +63,7 @@ public class ElementsUtil {
     public WebElement getElement(By locator) {
         try {
             WebElement element = driver.findElement(locator);
-            highlightElement(element);
+            //highlightElement(element);
             return element;
         } catch (NoSuchElementException e) {
             System.out.println("Element is not present on the page..." + locator);
@@ -350,7 +350,7 @@ public class ElementsUtil {
     public WebElement waitForElementPresence(By locator, int timeOut) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeOut));
         WebElement element =  wait.until(ExpectedConditions.presenceOfElementLocated(locator));
-        highlightElement(element);
+        //highlightElement(element);
         return element;
     }
 
@@ -366,7 +366,7 @@ public class ElementsUtil {
     public WebElement waitForElementVisible(By locator, int timeOut) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeOut));
         WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
-        highlightElement(element);
+        //highlightElement(element);
         return element;
 
     }
@@ -378,7 +378,7 @@ public class ElementsUtil {
                 .withMessage("===element is not found===");
 
         WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
-        highlightElement(element);
+        //highlightElement(element);
         return element;
 
     }

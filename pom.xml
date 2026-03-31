@@ -112,7 +112,7 @@
                     <forkCount>3</forkCount>
                     <reuseForks>true</reuseForks>
                     <suiteXmlFiles>
-                        <suiteXmlFile>src/resources/testrunners/test_chrome.xml</suiteXmlFile>
+                        <suiteXmlFile>src/resources/testrunners/test_firefox.xml</suiteXmlFile>
                     </suiteXmlFiles>
 
                     <argLine>
