@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/Rimjhimm12/March2026OpencartProject'
+                git branch: 'main', url: 'https://github.com/Rimjhimm12/March2026OpencartProject'
             }
         }
         stage('Run Tests') {
@@ -13,4 +13,3 @@ pipeline {
         }
     }
 }
-
