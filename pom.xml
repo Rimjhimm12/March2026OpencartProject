@@ -112,7 +112,9 @@
                     <forkCount>3</forkCount>
                     <reuseForks>true</reuseForks>
                     <suiteXmlFiles>
-                        <suiteXmlFile>src/resources/testrunners/test_firefox.xml</suiteXmlFile>
+<!--                        <suiteXmlFile>src/resources/testrunners/test_firefox.xml</suiteXmlFile>-->
+                        <!--suppress UnresolvedMavenProperty -->
+                        <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
                     </suiteXmlFiles>
 
                     <argLine>
