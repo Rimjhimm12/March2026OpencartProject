@@ -46,7 +46,7 @@ pipeline
             steps {
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
                     git branch: 'main', url: 'https://github.com/Rimjhimm12/March2026OpencartProject'
-                    sh "mvn clean test -Dsurefire.suiteXmlFiles=src/resources/testrunners/test_firefox.xml"
+                    sh "mvn clean test -DsuiteXmlFile=src/resources/testrunners/test_firefox.xml"
 
                 }
             }
@@ -90,7 +90,7 @@ pipeline
             steps {
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
                     git branch: 'main', url: 'https://github.com/Rimjhimm12/March2026OpencartProject'
-                    sh "mvn clean test -Dsurefire.suiteXmlFiles=src/resources/testrunners/test_chrome.xml"
+                    sh "mvn clean test -D.suiteXmlFile=src/resources/testrunners/test_chrome.xml"
 
                 }
             }
