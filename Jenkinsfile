@@ -12,7 +12,7 @@ pipeline
         {
             steps
             {
-                 git branch: 'main', url: 'https://github.com/Rimjhimm12/March2026OpencartProject'
+                 git branch: 'master', url: 'https://github.com/jglick/simple-maven-project-with-tests'
                  sh "mvn -Dmaven.test.failure.ignore=true clean package"
             }
             post
