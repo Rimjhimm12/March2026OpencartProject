@@ -8,22 +8,6 @@ pipeline
 
     stages
     {
-        stage('Build')
-        {
-            steps
-            {
-                 git 'https://github.com/Rimjhimm12/March2026OpencartProject'
-                 sh "mvn -Dmaven.test.failure.ignore=true clean package"
-            }
-            post
-            {
-                success
-                {
-                    junit '**/target/surefire-reports/TEST-*.xml'
-                    archiveArtifacts 'target/*.jar'
-                }
-            }
-        }
 
         stage("Deploy to Dev"){
             steps{

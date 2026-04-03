@@ -114,7 +114,7 @@
                     <suiteXmlFiles>
 <!--                        <suiteXmlFile>src/resources/testrunners/test_firefox.xml</suiteXmlFile>-->
                         <!--suppress UnresolvedMavenProperty -->
-                        <suiteXmlFile>${suiteXmlFiles}</suiteXmlFile>
+                        <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
                     </suiteXmlFiles>
 
                     <argLine>
