@@ -44,7 +44,7 @@ public class DriverFactory {
         switch (properties.getProperty("browser").toLowerCase().trim()){
             case "chrome":
                 //driver = new ChromeDriver();
-                if(Boolean.parseBoolean(prop.getProperty("remote"))){
+                if(Boolean.parseBoolean(properties.getProperty("remote"))){
                     initRemoteDriver("chrome");
                 }
                 else {
@@ -54,7 +54,7 @@ public class DriverFactory {
 
             case "firefox":
                 //driver = new FirefoxDriver();
-                if(Boolean.parseBoolean(prop.getProperty("remote"))){
+                if(Boolean.parseBoolean(properties.getProperty("remote"))){
                     initRemoteDriver("firefox");
                 }
                 else {
@@ -68,7 +68,7 @@ public class DriverFactory {
             case "edge":
                 System.setProperty("webdriver.edge.driver", "/Users/rimjhim/Desktop/edgedriver_mac64/msedgedriver");
                 //driver = new EdgeDriver();
-                if(Boolean.parseBoolean(prop.getProperty("remote"))){
+                if(Boolean.parseBoolean(properties.getProperty("remote"))){
                     initRemoteDriver("edge");
                 }
                 else {
@@ -156,8 +156,8 @@ public class DriverFactory {
      * This method is used to initialize the remote driver for Selenium Grid execution
      */
 
-    public void initRemoteDriver(String browserName){
-        System.out.println("Rnning it on GRID...with browser: " + browserName);
+    private void initRemoteDriver(String browserName){
+        System.out.println("Running it on GRID...with browser: " + browserName);
         try {
             switch (browserName) {
                 case "chrome":

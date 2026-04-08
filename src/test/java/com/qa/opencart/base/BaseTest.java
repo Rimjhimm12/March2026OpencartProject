@@ -28,13 +28,16 @@ public class BaseTest {
 
 
 
-    @Parameters({"browser"})
+    @Parameters({"browser","browserversion"})
     @BeforeTest
-    public void setup(@Optional("edge") String browserName) {
+    public void setup(@Optional("chrome") String browserName, @Optional("") String browserVersion) {
         df = new DriverFactory();
         prop = df.initProp();
         if(browserName!= null){
             prop.setProperty("browser", browserName);
+        }
+        if(browserVersion != null){
+            prop.setProperty("browserversion", browserVersion);
         }
         softAssert = new SoftAssert();
         driver = df.initDriver(prop); //call by reference
