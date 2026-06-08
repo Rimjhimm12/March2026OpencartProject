@@ -113,13 +113,13 @@
                     <reuseForks>true</reuseForks>
                     <suiteXmlFiles>
                         ${suiteXmlFile}
-                        <suiteXmlFile>src/resources/testrunners/test_firefox.xml</suiteXmlFile>
-                        suppress UnresolvedMavenProperty
+<!--                        <suiteXmlFile>src/resources/testrunners/test_firefox.xml</suiteXmlFile>-->
+                        <!--suppress UnresolvedMavenProperty -->
                     </suiteXmlFiles>
 
-<!--                    <argLine>-->
-<!--                        -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"-->
-<!--                    </argLine>-->
+                    <argLine>
+                        -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
+                    </argLine>
                 </configuration>
 
                 <dependencies>
