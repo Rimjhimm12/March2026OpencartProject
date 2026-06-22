@@ -1,17 +1,12 @@
 package com.qa.opencart.pages;
 
 import com.qa.opencart.constants.ConstantsUtil;
-import com.qa.opencart.utils.ElementsUtil;
 import com.qa.opencart.utils.TimeUtil;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 
-
-public class RegistrationPage {
-
-    private final WebDriver driver;
-    private final ElementsUtil elementsUtil;
+public class RegistrationPage extends BasePage {
 
 
     private final By FIRST_NAME = By.id("input-firstname");
@@ -30,8 +25,22 @@ public class RegistrationPage {
 
 
     public RegistrationPage(WebDriver driver) {
-        this.driver = driver;
-        elementsUtil = new ElementsUtil(driver);
+        super(driver);
+    }
+
+    @Override
+    public String getPageTitle() {
+        return driver.getTitle();
+    }
+
+    @Override
+    public String getPageURL() {
+        return driver.getCurrentUrl();
+    }
+
+    @Override
+    public String getPageType() {
+        return "Registration Page";
     }
 
 

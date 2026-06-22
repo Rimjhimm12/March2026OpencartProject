@@ -1,19 +1,30 @@
 package com.qa.opencart.pages;
 
-import com.qa.opencart.utils.ElementsUtil;
 import com.qa.opencart.utils.TimeUtil;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-public class SearchResultPage {
 
-    private final WebDriver driver;
-    private final ElementsUtil elementsUtil;
+public class SearchResultPage extends BasePage {
 
-    private final By SEARCH_RESULT_COUNT  = By.cssSelector("div.product-thumb");
+    private final By SEARCH_RESULT_COUNT = By.cssSelector("div.product-thumb");
 
-    public SearchResultPage(WebDriver driver){
-        this.driver = driver;
-        elementsUtil = new ElementsUtil(driver);
+    public SearchResultPage(WebDriver driver) {
+        super(driver);
+    }
+
+    @Override
+    public String getPageTitle() {
+        return driver.getTitle();
+    }
+
+    @Override
+    public String getPageURL() {
+        return driver.getCurrentUrl();
+    }
+
+    @Override
+    public String getPageType() {
+        return "Search Result Page";
     }
 
     public int getSearchResultCount() {

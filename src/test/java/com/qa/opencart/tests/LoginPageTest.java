@@ -10,13 +10,13 @@ public class LoginPageTest extends BaseTest {
 
     @Test(priority = 1)
     public void loginPageTitleTest(){
-        String title = loginPage.getLoginPageTitle();
+        String title = loginPage.getPageTitle();
         Assert.assertEquals(title,ConstantsUtil.LOGIN_PAGE_TITLE, AppErrors.TITLE_NOT_FOUND );
     }
 
     @Test(priority = 2)
     public void loginPageURLTest(){
-        String url = loginPage.getLoginPageURL();
+        String url = loginPage.getPageURL();
         Assert.assertTrue(url.contains(ConstantsUtil.LOGIN_PAGE_URL_FRACTION), AppErrors.URL_NOT_FOUND);
     }
 
@@ -28,7 +28,7 @@ public class LoginPageTest extends BaseTest {
     @Test(priority = 4)
     public void loginTest() {
        accountPage = loginPage.doLogin(prop.getProperty("username"), prop.getProperty("password"));
-        Assert.assertEquals(accountPage.getAccountPageTitle(),ConstantsUtil.ACCOUNT_PAGE_TITLE, AppErrors.ELEMENT_NOT_FOUND);
+        Assert.assertEquals(accountPage.getPageTitle(), ConstantsUtil.ACCOUNT_PAGE_TITLE, AppErrors.ELEMENT_NOT_FOUND);
 
     }
 

@@ -79,7 +79,7 @@ public class ProductInfoPageTest extends BaseTest {
          productInfoPage = searchResultPage.selectProductFromResults("MacBook Pro");
          Thread.sleep(1000);
          shoppingCartPage = productInfoPage.isProductAddedToCart();
-         String title = shoppingCartPage.getShoppingCartPageTitle();
+         String title = shoppingCartPage.getPageTitle();
          Assert.assertEquals(title, ConstantsUtil.SHOPPING_CART_PAGE_TITLE, AppErrors.TITLE_NOT_FOUND);
      }
 

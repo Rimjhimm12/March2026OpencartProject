@@ -21,19 +21,19 @@ public class AccountPageTest extends  BaseTest {
 
     @Test(priority = 1)
     public void accountPageTitleTest(){
-        String title = accountPage.getAccountPageTitle();
+        String title = accountPage.getPageTitle();
         Assert.assertEquals(title, ConstantsUtil.ACCOUNT_PAGE_TITLE, AppErrors.TITLE_NOT_FOUND);
     }
 
     @Test(priority = 2)
     public void accountPageURLTest(){
-        String url = accountPage.getAccountPageURL();
+        String url = accountPage.getPageURL();
         Assert.assertTrue(url.contains(ConstantsUtil.ACCOUNT_PAGE_URL), AppErrors.URL_NOT_FOUND);
     }
 
     @Test(priority = 3)
     public void accountPageLogoImageText(){
-        Boolean isLogoExist = accountPage.isLogoLinkExist();
+        Boolean isLogoExist = accountPage.isLogoDisplayed();
         Assert.assertTrue(isLogoExist, AppErrors.ELEMENT_NOT_FOUND);
     }
 

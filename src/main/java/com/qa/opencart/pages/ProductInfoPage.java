@@ -1,6 +1,5 @@
 package com.qa.opencart.pages;
 
-import com.qa.opencart.utils.ElementsUtil;
 import com.qa.opencart.utils.TimeUtil;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -11,9 +10,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
-public class ProductInfoPage {
-    private final WebDriver driver;
-    private final ElementsUtil elementsUtil;
+public class ProductInfoPage extends BasePage {
+
     private Map<String, String> metaData;
 
     private final By PRODUCT_NAME = By.cssSelector("div#content h1");
@@ -28,9 +26,23 @@ public class ProductInfoPage {
 
 
 
-    public ProductInfoPage(WebDriver driver){
-        this.driver = driver;
-        elementsUtil = new ElementsUtil(driver);
+    public ProductInfoPage(WebDriver driver) {
+        super(driver);
+    }
+
+    @Override
+    public String getPageTitle() {
+        return driver.getTitle();
+    }
+
+    @Override
+    public String getPageURL() {
+        return driver.getCurrentUrl();
+    }
+
+    @Override
+    public String getPageType() {
+        return "Product Info Page";
     }
 
     public String getProductInfo(){

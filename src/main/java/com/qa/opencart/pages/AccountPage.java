@@ -1,7 +1,6 @@
 package com.qa.opencart.pages;
 
 import com.qa.opencart.constants.ConstantsUtil;
-import com.qa.opencart.utils.ElementsUtil;
 import com.qa.opencart.utils.TimeUtil;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -12,43 +11,33 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class AccountPage {
+public class AccountPage extends BasePage {
 
-    private final WebDriver driver;
-    private final ElementsUtil elementsUtil;
-
-    public AccountPage(WebDriver driver){
-        this.driver = driver;
-        elementsUtil = new ElementsUtil(driver);
-    }
-
-
-    private final By LOGO_LINK = By.cssSelector("div#logo a");
     private final By HEADERS_LINK = By.cssSelector("div#content h2");
     private final By SEARCH_FIELD = By.cssSelector("div#search input");
     private final By SEARCH_ICON = By.cssSelector("div#search button");
 
-    /**
-     * Page actions - Methods to perform actions on the page.
-     * 1. Get the title of the page*
-     * 2. Get the URL of the page
-     * 3. Check if forgot PASSWORD link is exist on the page
-     */
-    public String getAccountPageTitle() {
+    public AccountPage(WebDriver driver) {
+        super(driver);
+    }
+
+    @Override
+    public String getPageTitle() {
         String title = elementsUtil.waitForTitleToBe(ConstantsUtil.ACCOUNT_PAGE_TITLE, TimeUtil.DEFAULT_TIME_OUT);
         System.out.println("Account Page Title: " + title);
         return title;
     }
 
-    public String getAccountPageURL(){
+    @Override
+    public String getPageURL() {
         String url = elementsUtil.waitForURLContains(ConstantsUtil.ACCOUNT_PAGE_URL, TimeUtil.DEFAULT_TIME_OUT);
-        System.out.println("Account Page Title: " + url);
+        System.out.println("Account Page URL: " + url);
         return url;
     }
 
-    public Boolean isLogoLinkExist(){
-        return elementsUtil.doIsDisplayed(LOGO_LINK);
-
+    @Override
+    public String getPageType() {
+        return "Account Page";
     }
 
     public List<String> getAccountPageHeaders(){
