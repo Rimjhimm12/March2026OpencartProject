@@ -29,7 +29,7 @@ public class ExcelUtil {
             Sheet sheet = workbook.getSheet(sheetName.trim());
             if (sheet == null) {
                 throw new IllegalArgumentException("Sheet '" + sheetName + "' not found in " + TEST_DATA_SHEET_PATH
-                        + ". Available sheets: " + getSheetNames(workbook));
+                        + ". Available sheets: " +  getSheetNames(workbook));
             }
 
             Row headerRow = sheet.getRow(0);
